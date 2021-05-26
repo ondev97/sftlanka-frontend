@@ -675,3 +675,98 @@ i.cl {
   border-radius: 20px;
   border: transparent;
 }
+
+/*List View*/
+.st_top_manage_body .st_mange_cos_body .st_manage_course_grid.st_lists {
+  display: flex;
+  flex-direction: column;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  a.stCourseMy {
+  width: 70%;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  a.stCourseMy
+  .st_grid_card_manage {
+  width: 100%;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  .st_grid_card_manage {
+  height: auto !important;
+  width: 70%;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  .st_grid_card_manage
+  .st_grid_card_mg_head {
+  display: none;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  .st_grid_card_manage
+  .st_cos_manage_num {
+  display: none;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  .st_grid_card_manage
+  .st_grid_card_mg_body {
+  text-align: left;
+  background: linear-gradient(to left, #f6faff, #fff);
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  a.stCourseMy
+  .st_grid_card_manage
+  .st_grid_card_mg_body {
+  padding: 15px;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  .st_grid_card_manage
+  .st_grid_card_mg_body
+  .forlist {
+  display: flex;
+  padding: 15px 5px;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  .st_grid_card_manage
+  .st_grid_card_mg_body
+  .forlist
+  div {
+  flex: 0.8;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  .st_grid_card_manage
+  .st_grid_card_mg_body
+  .forlist
+  .st_purchase_row {
+  flex: 0.2;
+  justify-content: center;
+  align-items: center;
+}
+.st_top_manage_body
+  .st_mange_cos_body
+  .st_manage_course_grid.st_lists
+  .st_grid_card_manage
+  .st_grid_card_mg_body
+  .forlist
+  .st_purchase_row
+  button {
+  text-align: center;
+}

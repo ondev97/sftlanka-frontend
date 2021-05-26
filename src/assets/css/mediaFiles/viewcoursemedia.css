@@ -1,3 +1,11 @@
+@media screen and (max-width: 1200px) {
+  .top_manage_body
+    .mange_cos_body
+    .manage_course_grid.list_course
+    .grid_card_manage {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 857px) {
   .top_manage_body .mange_cos_body .manage_course_nav {
     justify-content: center;

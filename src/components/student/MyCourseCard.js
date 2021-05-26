@@ -15,7 +15,10 @@ export default function MyCourseCard({
   payment,
 }) {
   return (
-    <Link to={is_freeze ? `#` : `/studentdashboard/stmodules/${courseid}/`}>
+    <Link
+      className="stCourseMy"
+      to={is_freeze ? `#` : `/studentdashboard/stmodules/${courseid}/`}
+    >
       <div
         className={
           is_freeze ? `st_grid_card_manage freezeCard` : `st_grid_card_manage`

@@ -203,23 +203,26 @@ export default function CourseCard({
         </Link>
         <Link to="#'">
           <div className="st_grid_card_mg_body">
-            <h3>{course_name}</h3>
-            {price === null || price === 0 ? (
-              <h4>Free</h4>
-            ) : (
-              <h4>LKR {price}</h4>
-            )}
-            <div className="st_purchase_row">
-              {!is_freeze ? (
-                is_enrolled ? (
-                  <Link to={`/studentdashboard/stmodules/${courseid}/`}>
-                    <button>
-                      <i className="fas fa-eye"></i>View Course
-                    </button>
-                  </Link>
+            <div className="forlist">
+              <div>
+                <h3>{course_name}</h3>
+                {price === null || price === 0 ? (
+                  <h4>Free</h4>
                 ) : (
-                  <>
-                    {/*
+                  <h4>LKR {price}</h4>
+                )}
+              </div>
+              <div className="st_purchase_row">
+                {!is_freeze ? (
+                  is_enrolled ? (
+                    <Link to={`/studentdashboard/stmodules/${courseid}/`}>
+                      <button>
+                        <i className="fas fa-eye"></i>View Course
+                      </button>
+                    </Link>
+                  ) : (
+                    <>
+                      {/*
                                                 <PaymentModal
                                                     // Use a unique value for the orderId
                                                     course_id={courseid}
@@ -228,18 +231,19 @@ export default function CourseCard({
                                                     user={user}
                                                 />
                                                 <button><i className="fas fa-shopping-cart"></i>Buy Key</button>*/}
-                    {price === null || price === 0 ? (
-                      <button onClick={freeEn}>Free Enroll</button>
-                    ) : (
-                      <button onClick={openModel}>
-                        <i className="fas fa-key"></i>Key
-                      </button>
-                    )}
-                  </>
-                )
-              ) : (
-                <p className="freezep">Course freezed</p>
-              )}
+                      {price === null || price === 0 ? (
+                        <button onClick={freeEn}>Free Enroll</button>
+                      ) : (
+                        <button onClick={openModel}>
+                          <i className="fas fa-key"></i>Key
+                        </button>
+                      )}
+                    </>
+                  )
+                ) : (
+                  <p className="freezep">Course freezed</p>
+                )}
+              </div>
             </div>
             <div className="cs_st_tail">
               <h4>

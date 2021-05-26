@@ -62,8 +62,10 @@ export default function TcMaCourses({
       <Link to={`/teacherdashboard/viewcourse/${id}`}>
         <div className="cscard_body">
           <div className="cscard_mid">
-            <h2>{subject_name}</h2>
-            <h3>{short_description}</h3>
+            <div>
+              <h2>{subject_name}</h2>
+              <h3>{short_description}</h3>
+            </div>
             <div className="ty">
               <h4>
                 <i className="fas fa-graduation-cap"></i>

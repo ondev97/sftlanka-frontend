@@ -562,3 +562,66 @@ i.cl {
   font-size: 14px;
   color: #2d8cff;
 }
+
+/* List view courses*/
+.top_manage_body .mange_cos_body .manage_course_grid.list_course {
+  display: flex;
+  flex-direction: column;
+}
+.top_manage_body
+  .mange_cos_body
+  .manage_course_grid.list_course
+  .grid_card_manage
+  .grid_card_mg_head {
+  display: none;
+}
+.top_manage_body
+  .mange_cos_body
+  .manage_course_grid.list_course
+  .grid_card_manage {
+  height: auto;
+  width: 70%;
+  background: linear-gradient(to left, #f6faff, #fff);
+}
+.top_manage_body
+  .mange_cos_body
+  .manage_course_grid.list_course
+  .grid_card_manage
+  .cos_manage_num {
+  display: none;
+}
+.top_manage_body
+  .mange_cos_body
+  .manage_course_grid.list_course
+  .grid_card_manage
+  .grid_card_mg_body {
+  text-align: left;
+  border-radius: 3px;
+  padding: 15px;
+}
+.top_manage_body
+  .mange_cos_body
+  .manage_course_grid.list_course
+  .grid_card_manage
+  .cos_options_mna
+  h3
+  i {
+  color: var(--h1Fontcolor);
+}
+.top_manage_body
+  .mange_cos_body
+  .manage_course_grid.list_course
+  .grid_card_manage
+  .grid_card_mg_body
+  .cs_tail {
+  padding: 0;
+}
+.top_manage_body
+  .mange_cos_body
+  .manage_course_grid.list_course
+  .grid_card_manage
+  .grid_card_mg_body
+  .cs_tail
+  h4 {
+  text-align: right;
+}

@@ -176,7 +176,7 @@ export default function CourseView() {
                 dataLength={courseData.length}
                 next={next}
                 hasMore={true}
-                className="manage_course_grid"
+                className="manage_course_grid list_course"
               >
                 {courseData.map((cdata, index) => (
                   <CourseSect

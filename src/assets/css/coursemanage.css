@@ -218,3 +218,99 @@
 .main_ar_course .course_body .course_card .cscard_bottom i {
   margin-right: 5px;
 }
+
+/*Course card list view*/
+.main_ar_course .course_body.list_view {
+  display: flex;
+  flex-direction: column;
+}
+.main_ar_course .course_body.list_view .course_card {
+  width: 70%;
+  height: auto;
+  padding: 5px 0;
+  border-radius: 3px;
+  background: linear-gradient(to left, #f6faff, #fff);
+}
+
+.main_ar_course
+  .course_body.list_view
+  .course_card
+  .cscard_body
+  .cscard_mid
+  .ty {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.main_ar_course
+  .course_body.list_view
+  .course_card
+  .cscard_body
+  .cscard_mid
+  .ty
+  h4 {
+  font-size: 12px;
+  margin-right: 20px;
+}
+.main_ar_course
+  .course_body.list_view
+  .course_card
+  .cscard_body
+  .cscard_mid
+  .ty
+  h5 {
+  font-size: 13px;
+}
+.main_ar_course
+  .course_body.list_view
+  .course_card
+  .cscard_body
+  .cscard_mid
+  .ty
+  i {
+  font-size: 15px;
+}
+.main_ar_course .course_body.list_view .course_card .cscard_head {
+  position: initial;
+}
+.main_ar_course .course_body.list_view .course_card .cscard_head a {
+  display: none;
+}
+.main_ar_course .course_body.list_view .course_card .cos_options {
+  z-index: 5;
+}
+.main_ar_course .course_body.list_view .course_card .cos_options h3 i {
+  color: var(--h1Fontcolor);
+}
+.main_ar_course .course_body.list_view .course_card .cos_options a {
+  display: block;
+}
+.main_ar_course .course_body.list_view .course_card .cos_options .options_body {
+  background-color: #fff;
+  border: 1px solid var(--buttonColor1);
+}
+.main_ar_course
+  .course_body.list_view
+  .course_card
+  .cscard_body
+  .cscard_mid
+  h2 {
+  text-align: left;
+  font-size: 22px;
+}
+.main_ar_course
+  .course_body.list_view
+  .course_card
+  .cscard_body
+  .cscard_mid
+  h3 {
+  font-size: 15px;
+  text-align: left;
+}
+.main_ar_course .course_body.list_view .course_card .cscard_bottom {
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  background: none;
+  height: auto;
+}
