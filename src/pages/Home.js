@@ -47,21 +47,21 @@ export default function Home() {
       <div className="uppercover">
         <div className="cov_text">
           <h1>
-            HDOLSET
+            SFTLANKA
             <br />
             <span>ජාතියේ දූ පුතුන්ගේ ජාත්‍යන්තර තක්සලාව.</span>
           </h1>
           <p>
-            ශ්‍රී ලාංකීය දු දරුවන්ගේ අධ්‍යාපනය වෙනුවෙන් නිරතුරුවම කැපවුන HDOLSET
-            හරහා ඔබගේ විෂයට අදාල ලංකාවේ ප්‍රවීන ගුරුවරුන් සමග සම්බන්ද වෙමින්
-            නිවසේ සිට සුරක්ෂිතව අධ්‍යාපන කටයුතු සිදු කරන්න.
+            ශ්‍රී ලාංකීය දු දරුවන්ගේ අධ්‍යාපනය වෙනුවෙන් නිරතුරුවම කැපවුන
+            SFTLANKA හරහා ඔබගේ විෂයට අදාල ලංකාවේ ප්‍රවීන ගුරුවරුන් සමග සම්බන්ද
+            වෙමින් නිවසේ සිට සුරක්ෂිතව අධ්‍යාපන කටයුතු සිදු කරන්න.
           </p>
           <Link to={"#"}>
             <button>Guidelines</button>
           </Link>
           <div className="simple_footer">
             <h3>
-              COPYRIGHT © HDOLSET | PROUDLY POWERED BY
+              COPYRIGHT © SFTLANKA | PROUDLY POWERED BY
               <span>
                 {
                   <Link to="//helamid.com" target="_blank">

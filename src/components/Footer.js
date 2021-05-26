@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="ab">
             <p>
               ශ්‍රී ලාංකීය දු දරුවන්ගේ අධ්‍යාපනය වෙනුවෙන් නිරතුරුවම කැපවුන
-              HDOLSET හරහා ඔබගේ විෂයට අදාල ලංකාවේ ප්‍රවීන ගුරුවරුන් සමග සම්බන්ද
+              SFTLANKA හරහා ඔබගේ විෂයට අදාල ලංකාවේ ප්‍රවීන ගුරුවරුන් සමග සම්බන්ද
               වෙමින් නිවසේ සිට සුරක්ෂිතව අධ්‍යාපන කටයුතු සිදු කරන්න.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Footer() {
       </div>
       <div className="small_footer">
         <h3>
-          COPYRIGHT © HDOLSET | PROUDLY POWERED BY
+          COPYRIGHT © SFTLANKA | PROUDLY POWERED BY
           <span>
             {
               <Link to="//helamid.com" target="_blank">
