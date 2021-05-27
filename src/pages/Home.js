@@ -129,10 +129,9 @@ export default function Home() {
         </h3>
         <h1>You can be your own guiding star with our help!</h1>
         <button>Get Started</button>
-      </div>
+            </div>*/}
       <div className="inde_counter">
         <div className="main_inde_counter">
-          <h1>Teachers open the door, but you must enter by yourself</h1>
           <div className="wr">
             <div className="counter_colu">
               <h2>Students</h2>
@@ -153,6 +152,29 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="inde_counter">
+        <div className="main_inde_counter">
+          <div className="wr">
+            <div className="counter_colu">
+              <h2>PAID LIVE CLASS</h2>
+              <h3>{statistics.students}+</h3>
+            </div>
+            <div className="counter_colu">
+              <h2>FREE LIVE CLASS</h2>
+              <h3>{statistics.subjects}+</h3>
+            </div>
+            <div className="counter_colu">
+              <h2>PAID RECORDED CLASS</h2>
+              <h3>{statistics.teachers}+</h3>
+            </div>
+            <div className="counter_colu">
+              <h2>PAID FREE CLASS</h2>
+              <h3>{statistics.courses}+</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*
       <div className="get_start_sec">
         <div className="main_get_start">
           <div className="get_start_column">
