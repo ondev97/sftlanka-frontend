@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { activeAccount } from "../actions";
 import { loadStDetails } from "../actions/stDetailsAction";
-import cov from "../img/cover.jpg";
+import cov from "../img/cover.png";
 // import instructor from "../img/svg/instructor.svg";
 // import learning from "../img/svg/learning.svg";
 // import support from "../img/svg/support.svg";
@@ -47,18 +47,15 @@ export default function Home() {
       <div className="uppercover">
         <div className="cov_text">
           <h1>
-            SFTLANKA
+            SFT<span className="blackhe">Lanka</span>
             <br />
-            <span>ජාතියේ දූ පුතුන්ගේ ජාත්‍යන්තර තක්සලාව.</span>
+            <span>පිටවීම සරසවියට පමණයි</span>
           </h1>
           <p>
-            ශ්‍රී ලාංකීය දු දරුවන්ගේ අධ්‍යාපනය වෙනුවෙන් නිරතුරුවම කැපවුන
-            SFTLANKA හරහා ඔබගේ විෂයට අදාල ලංකාවේ ප්‍රවීන ගුරුවරුන් සමග සම්බන්ද
-            වෙමින් නිවසේ සිට සුරක්ෂිතව අධ්‍යාපන කටයුතු සිදු කරන්න.
+            වැඩිම සිසුන් ගණනකට A සාමාර්ථ හා සරසවි වරම් දුන් ශ්‍රී ලංකාවේ අංක 1
+            තාක්ෂණවේදය සදහා විද්‍යාව (Science For Technology - SFT) ගුරුවරයා.
           </p>
-          <Link to={"#"}>
-            <button>Guidelines</button>
-          </Link>
+          <h2>Pradeep S Dissanayake</h2>
           <div className="simple_footer">
             <h3>
               COPYRIGHT © SFTLANKA | PROUDLY POWERED BY

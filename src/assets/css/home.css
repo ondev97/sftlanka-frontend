@@ -59,6 +59,11 @@
   margin-bottom: 25px;
   line-height: 50px;
 }
+.maininde .uppercover .cov_text h1 span.blackhe {
+  font-family: "Open Sans", sans-seri;
+  font-size: 60px;
+  color: #525252;
+}
 .maininde .uppercover .cov_text h1 span {
   font-size: 35px;
   color: black;
@@ -72,6 +77,10 @@
   font-weight: 600;
   width: 70%;
   font-family: "Abhaya Libre", serif;
+}
+.maininde .uppercover .cov_text h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 28px;
 }
 .maininde .uppercover .cov_text button {
   padding: 12px;
