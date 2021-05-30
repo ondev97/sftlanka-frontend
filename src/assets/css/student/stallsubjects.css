@@ -199,6 +199,7 @@
 .all_st_subs .all_sub_body.list_view_st {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 .all_st_subs
   .all_sub_body.list_view_st
@@ -207,7 +208,7 @@
   display: none;
 }
 .all_st_subs .all_sub_body.list_view_st .al_sub_card {
-  width: 70%;
+  width: 100%;
   height: auto;
   position: relative;
   padding: 12px 5px;
@@ -237,6 +238,7 @@
   .sub_type
   ul {
   justify-content: flex-start;
+  padding: 0;
 }
 .all_st_subs
   .all_sub_body.list_view_st

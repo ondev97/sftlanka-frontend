@@ -115,7 +115,7 @@ export default function CourseView() {
         />
         <div className="top_manage_head">
           <h1>{subData.sub_name || ""}</h1>
-          <h3>{subData.sub_name || ""}</h3>
+          <h3>{subData.sub_sdes || ""}</h3>
         </div>
 
         <div className="options_subs">

@@ -101,7 +101,7 @@ export default function StudentMainDashboard() {
             </InfiniteScroll>
           </div>
         ) : (
-          <Empty />
+          <Empty target="No Enrolled Subjects" />
         )}
         {isLoading && <ProfileLoader />}
       </div>
