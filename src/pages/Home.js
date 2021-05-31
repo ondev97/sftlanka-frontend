@@ -157,28 +157,28 @@ export default function Home() {
         <div className="main_inde_counter">
           <div className="wr">
             <div className="counter_colu">
-              <h2>PAID LIVE CLASS</h2>
               <div className="img_sec">
                 <img src={imgSec1} />
               </div>
+              <h2>PAID LIVE CLASS</h2>
             </div>
             <div className="counter_colu">
-              <h2>FREE LIVE CLASS</h2>
               <div className="img_sec">
                 <img src={imgSec2} />
               </div>
+              <h2>FREE LIVE CLASS</h2>
             </div>
             <div className="counter_colu">
-              <h2>PAID RECORDED CLASS</h2>
               <div className="img_sec">
                 <img src={imgSec3} />
               </div>
+              <h2>PAID RECORDED CLASS</h2>
             </div>
             <div className="counter_colu">
-              <h2>FREE RECORDED CLASS</h2>
               <div className="img_sec">
                 <img src={imgSec4} />
               </div>
+              <h2>FREE RECORDED CLASS</h2>
             </div>
           </div>
         </div>

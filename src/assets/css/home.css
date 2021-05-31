@@ -54,18 +54,18 @@
   object-fit: cover;
 }
 .maininde .uppercover .cov_text h1 {
-  font-size: 60px;
+  font-size: 56px;
   color: var(--mainCovHeader);
   margin-bottom: 25px;
   line-height: 50px;
 }
 .maininde .uppercover .cov_text h1 span.blackhe {
   font-family: "Open Sans", sans-seri;
-  font-size: 60px;
+  font-size: 56px;
   color: #525252;
 }
 .maininde .uppercover .cov_text h1 span {
-  font-size: 35px;
+  font-size: 32px;
   color: black;
   line-height: 30px;
   font-family: "Abhaya Libre", serif;
@@ -430,8 +430,8 @@
   margin-right: 0;
 }
 .maininde .inde_counter .main_inde_counter .counter_colu h2 {
-  margin-bottom: 10px;
-  font-size: 17px;
+  margin-top: 15px;
+  font-size: 16px;
 }
 .maininde .inde_counter .main_inde_counter .counter_colu img {
   width: 100px;
