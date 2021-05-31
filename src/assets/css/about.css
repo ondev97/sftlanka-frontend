@@ -71,6 +71,7 @@
   }
   .maininde .inde_counter .main_inde_counter .counter_colu {
     margin-bottom: 15px;
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 290px) {

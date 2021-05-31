@@ -431,7 +431,10 @@
 }
 .maininde .inde_counter .main_inde_counter .counter_colu h2 {
   margin-bottom: 10px;
-  font-size: 22px;
+  font-size: 17px;
+}
+.maininde .inde_counter .main_inde_counter .counter_colu img {
+  width: 100px;
 }
 
 /*get start*/

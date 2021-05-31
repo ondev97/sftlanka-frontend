@@ -15,6 +15,10 @@ import "../assets/css/mediaFiles/homemedia.css";
 import { Link } from "react-router-dom";
 // import AllSubCard from "../components/AllSubCard";
 import Axios from "axios";
+import imgSec1 from "../img/1.png";
+import imgSec2 from "../img/2.png";
+import imgSec3 from "../img/3.png";
+import imgSec4 from "../img/4.png";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -127,7 +131,7 @@ export default function Home() {
         <h1>You can be your own guiding star with our help!</h1>
         <button>Get Started</button>
             </div>*/}
-      <div className="inde_counter">
+      {/* <div className="inde_counter">
         <div className="main_inde_counter">
           <div className="wr">
             <div className="counter_colu">
@@ -148,25 +152,33 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="inde_counter">
         <div className="main_inde_counter">
           <div className="wr">
             <div className="counter_colu">
               <h2>PAID LIVE CLASS</h2>
-              <h3>{statistics.students}+</h3>
+              <div className="img_sec">
+                <img src={imgSec1} />
+              </div>
             </div>
             <div className="counter_colu">
               <h2>FREE LIVE CLASS</h2>
-              <h3>{statistics.subjects}+</h3>
+              <div className="img_sec">
+                <img src={imgSec2} />
+              </div>
             </div>
             <div className="counter_colu">
               <h2>PAID RECORDED CLASS</h2>
-              <h3>{statistics.teachers}+</h3>
+              <div className="img_sec">
+                <img src={imgSec3} />
+              </div>
             </div>
             <div className="counter_colu">
-              <h2>PAID FREE CLASS</h2>
-              <h3>{statistics.courses}+</h3>
+              <h2>FREE RECORDED CLASS</h2>
+              <div className="img_sec">
+                <img src={imgSec4} />
+              </div>
             </div>
           </div>
         </div>
