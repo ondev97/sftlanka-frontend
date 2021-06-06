@@ -7,7 +7,11 @@ function StValidate(ValidateSignUp) {
     lastName: "",
     userName: "",
     email: "",
+    address: "",
+    district: "",
     phonenumber: "",
+    telegram_number: "",
+    parent_number: "",
     pw: "",
     cpw: "",
   });
@@ -17,6 +21,11 @@ function StValidate(ValidateSignUp) {
     lastName: "",
     userName: "",
     email: "",
+    address: "",
+    district: "",
+    phonenumber: "",
+    telegram_number: "",
+    parent_number: "",
     phonenumber: "",
     pw: "",
     cpw: "",
@@ -27,7 +36,11 @@ function StValidate(ValidateSignUp) {
     lastName: false,
     userName: false,
     email: false,
+    address: false,
+    district: false,
     phonenumber: false,
+    telegram_number: false,
+    parent_number: false,
     pw: false,
     cpw: false,
   });
@@ -61,7 +74,11 @@ function StValidate(ValidateSignUp) {
       lastName: false,
       userName: false,
       email: false,
+      address: false,
+      district: false,
       phonenumber: false,
+      telegram_number: false,
+      parent_number: false,
       pw: false,
       cpw: false,
     });
@@ -89,6 +106,10 @@ function StValidate(ValidateSignUp) {
       first_name: values.firstName,
       last_name: values.lastName,
       phone_no: values.phonenumber,
+      address: values.address,
+      parent_number: values.parent_number,
+      district: values.district,
+      telegram_number: values.telegram_number,
     })
       .then((res) => {
         setac(true);
