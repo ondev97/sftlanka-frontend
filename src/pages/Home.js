@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { activeAccount } from "../actions";
 import { loadStDetails } from "../actions/stDetailsAction";
-import cov from "../img/cover.png";
+import cov from "../img/cover.jpg";
 // import instructor from "../img/svg/instructor.svg";
 // import learning from "../img/svg/learning.svg";
 // import support from "../img/svg/support.svg";
