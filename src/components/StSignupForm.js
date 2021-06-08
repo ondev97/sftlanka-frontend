@@ -140,9 +140,8 @@ export default function StSignupForm() {
               <option value="Jaffna">Jaffna</option>
               <option value="Kilinochchi">Kilinochchi</option>
               <option value="Mannar">Mannar</option>
-              <option value="Mannar">Mannar</option>
               <option value="Mullaitivu">Mullaitivu</option>
-              <option value="Mullaitivu">Mullaitivu</option>
+              <option value="Vavuniya">Vavuniya</option>
               <option value="Puttalam">Puttalam</option>
               <option value="Kurunegala">Kurunegala</option>
               <option value="Anuradhapura">Anuradhapura</option>

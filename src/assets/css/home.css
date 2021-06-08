@@ -396,7 +396,7 @@
 
 /*Counter*/
 .maininde .inde_counter {
-  padding: 30px 0 0;
+  padding: 30px 30px 0;
 }
 .maininde .inde_counter h1 {
   font-size: 22px;
@@ -435,6 +435,70 @@
 }
 .maininde .inde_counter .main_inde_counter .counter_colu img {
   width: 100px;
+}
+/*new box*/
+.maininde .inde_counter.new-box .main_inde_counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.maininde .inde_counter.new-box {
+  font-family: "Abhaya Libre", serif;
+  margin-top: 20px;
+}
+.maininde .inde_counter.new-box .wr {
+  width: 100%;
+}
+.maininde .inde_counter.new-box .main_inde_counter .title {
+  padding: 25px;
+  border: 1px solid var(--mainCovHeader);
+  border-radius: 5px;
+  width: 50%;
+  margin-bottom: 30px;
+  background-color: #fbfaff;
+}
+.maininde .inde_counter.new-box .main_inde_counter .title h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.maininde .inde_counter.new-box .main_inde_counter .counter_colu img {
+  margin-bottom: 12px;
+}
+.maininde .inde_counter.new-box .main_inde_counter .counter_colu h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.maininde .inde_counter.new-box .main_inde_counter .counter_colu h3 {
+  font-size: 20px;
+  color: #000;
+}
+.maininde .inde_counter.one {
+  font-family: "Open Sans", sans-seri;
+}
+.maininde .inde_counter.one .main_inde_counter .title {
+  background-color: #fbfaff;
+}
+.maininde .inde_counter.one .main_inde_counter .title h1 {
+  font-size: 25px;
+}
+.maininde .inde_counter.one .main_inde_counter .counter_colu h2 {
+  font-size: 16px;
+  padding-bottom: 12px;
+}
+.maininde .inde_counter.one .main_inde_counter .counter_colu h3 {
+  text-align-last: left;
+  text-indent: 25px;
+  font-size: 15px;
+  color: var(--buttonColorHover1);
+}
+.maininde .inde_counter.cont {
+  padding-top: 30px;
+  margin-top: 0;
+  margin-bottom: 60px;
 }
 
 /*get start*/
