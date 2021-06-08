@@ -99,3 +99,8 @@
     display: none;
   }
 }
+@media screen and (max-width: 363px) {
+  .maininde .inde_counter .main_inde_counter .counter_colu {
+    min-width: 100%;
+  }
+}
