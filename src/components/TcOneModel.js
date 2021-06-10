@@ -43,6 +43,7 @@ export default function TcOneModel({
     let youtubeRegular = new RegExp(
       /(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/
     );
+
     let media = [];
     if (nodes.length > 0) {
       for (let i = 0; i < nodes.length; i++) {
@@ -110,15 +111,31 @@ export default function TcOneModel({
                 ) {
                   media.push(
                     <div className="button-row" key={i}>
-                      <a
-                        href={nodes[i].props.children[p].props.href}
-                        target="__block"
-                      >
-                        <button className="youtube">
+                      <button className="youtube">
+                        <a
+                          href={nodes[i].props.children[p].props.href}
+                          target="__block"
+                        >
                           <i className="fab fa-youtube"></i>
                           Join YouTube Live Class
-                        </button>
-                      </a>
+                        </a>
+                      </button>
+                    </div>
+                  );
+                } else if (
+                  nodes[i].props.children[p].props.href.includes("zoom.us")
+                ) {
+                  media.push(
+                    <div className="button-row" key={i}>
+                      <button className="zoom">
+                        <a
+                          href={nodes[i].props.children[p].props.href}
+                          target="__block"
+                        >
+                          <i className="fas fa-graduation-cap"></i>
+                          Join Zoom Live Class
+                        </a>
+                      </button>
                     </div>
                   );
                 } else {
