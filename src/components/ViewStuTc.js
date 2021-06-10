@@ -9,6 +9,7 @@ export default function ViewStuTc({
   stPrDetail,
   setstPrDetail,
 }) {
+  console.log(stPrDetail);
   const close = (e) => {
     if (
       e.target.classList.contains("modelbg") ||
@@ -43,10 +44,27 @@ export default function ViewStuTc({
                 <h1>
                   {stPrDetail.user.first_name + " " + stPrDetail.user.last_name}
                 </h1>
-                <h2>{stPrDetail.user.username}</h2>
-                <h3>{stPrDetail.user.email}</h3>
-                <h3>{stPrDetail.user.phone_no}</h3>
-                <h4>{stPrDetail.user.address}</h4>
+                <h2>
+                  <span>User Name</span>
+                  {stPrDetail.user.username}
+                </h2>
+                <h3>
+                  <span>Email</span> {stPrDetail.user.email}
+                </h3>
+                <h3>
+                  <span>Phone Number</span> {stPrDetail.user.phone_no}
+                </h3>
+                <h4>
+                  <span>Parent Number</span>{" "}
+                  {stPrDetail.user.parent_number || "null"}
+                </h4>
+                <h4>
+                  <span>Telegram Number</span>{" "}
+                  {stPrDetail.user.telegram_number || "null"}
+                </h4>
+                <h4>
+                  <span>Address</span> {stPrDetail.user.address || "null"}
+                </h4>
                 <div className="dis">
                   <p>
                     {stPrDetail.description !== "null" && stPrDetail.description

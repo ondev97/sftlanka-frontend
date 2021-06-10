@@ -150,7 +150,7 @@ export default function AllStList() {
                     <th>Name</th>
                     <th>Class Number</th>
                     <th>Email</th>
-                    <th>Unenroll</th>
+                    <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>

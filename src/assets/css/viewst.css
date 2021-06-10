@@ -72,10 +72,18 @@
   font-weight: 500;
   margin-bottom: 8px;
 }
+.modelbg .modelcard .pagebottom h2 span {
+  font-size: 17px;
+  font-weight: 600;
+}
 .modelbg .modelcard .pagebottom h3 {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
+}
+.modelbg .modelcard .pagebottom h3 span {
+  font-size: 15px;
+  font-weight: 600;
 }
 .modelbg .modelcard .pagebottom h4 {
   font-size: 13px;
