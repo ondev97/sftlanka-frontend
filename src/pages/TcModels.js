@@ -133,7 +133,7 @@ export default function TcModels() {
             </div>
             <div className="al_models">
               {moduleData.length !== 0 ? (
-                moduleData.map((data) => (
+                moduleData.map((data, index) => (
                   <TcOneModel
                     key={data.id}
                     msg={data.module_content}

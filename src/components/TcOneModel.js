@@ -20,7 +20,7 @@ export default function TcOneModel({
   const [playing, setplaying] = useState(false);
   //get acDetails from Redux Store
   const usDetails = useSelector((state) => state.accountDetails);
-
+  //console.log(msg);
   const playPush = (e) => {
     if (e.target.className.includes("player_overlay")) {
       if (playing) {
@@ -40,6 +40,9 @@ export default function TcOneModel({
 
   //filtering message and embed react player
   function filterTags(nodes) {
+    let youtubeRegular = new RegExp(
+      /(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/
+    );
     let media = [];
     if (nodes.length > 0) {
       for (let i = 0; i < nodes.length; i++) {
@@ -99,7 +102,36 @@ export default function TcOneModel({
             media = [...media, nodes[i]];
           }
         } else {
-          media = [...media, nodes[i]];
+          if (nodes[i].props.children) {
+            for (let p = 0; p < nodes[i].props.children.length; p++) {
+              if (nodes[i].props.children[p].type === "a") {
+                if (
+                  youtubeRegular.test(nodes[i].props.children[p].props.href)
+                ) {
+                  media.push(
+                    <div className="button-row" key={i}>
+                      <a
+                        href={nodes[i].props.children[p].props.href}
+                        target="__block"
+                      >
+                        <button className="youtube">
+                          <i className="fab fa-youtube"></i>
+                          Join YouTube Live Class
+                        </button>
+                      </a>
+                    </div>
+                  );
+                } else {
+                  media = [...media, nodes[i]];
+                }
+              } else {
+                media = [...media, nodes[i]];
+                break;
+              }
+            }
+          } else {
+            media = [...media, nodes[i]];
+          }
         }
       }
       return media;
