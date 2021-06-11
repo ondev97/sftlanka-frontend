@@ -69,7 +69,7 @@ export default function ModelsCourseDescri({ id }) {
     if (stDetails.length > 0) {
       stDetails.map((details, index) => {
         cvData.push({
-          id: index + 1,
+          ID: index + 1,
           "Full Name": details.user.first_name + " " + details.user.last_name,
           "User Name": details.user.username,
           Email: details.user.email,
