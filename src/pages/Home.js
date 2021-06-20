@@ -293,13 +293,6 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      <div className="waht_app">
-        <Link to="//wa.me/message/32WYZ3JJUSIOA1" target="_blank">
-          <button>
-            <i class="fab fa-whatsapp"></i>
-          </button>
-        </Link>
-      </div>
     </div>
   );
 }
