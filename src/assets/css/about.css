@@ -39,7 +39,7 @@
 .maininde .body_sec .ab_column img {
   width: 80%;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1350px) {
   .maininde .body_sec {
     width: 95%;
   }

@@ -15,8 +15,7 @@
 }
 .maininde .uppercover {
   position: relative;
-  width: 100%;
-  min-height: calc(100vh - 93px);
+  min-height: calc(70vh - 93px);
   background-color: var(--background1);
   padding: 0;
   display: flex;
@@ -24,22 +23,70 @@
   align-items: center;
 }
 .maininde .uppercover .cov_text {
-  width: 60%;
-  margin-right: 50px;
+  flex: 1;
   z-index: 100;
-  min-height: calc(100vh - 91px);
+  min-height: calc(70vh - 91px);
   padding: 40px;
-  background: linear-gradient(
-    to right,
-    #fff,
-    #fffffffc,
-    #ffffffcc,
-    transparent
-  );
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+}
+.maininde .uppercover .loginform {
+  flex: 1;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.maininde .uppercover .loginform .loginWrapper {
+  background-color: #080f0dbf;
+  min-width: 500px;
+  border-radius: 25px;
+  padding: 45px;
+  color: #fff;
+}
+.maininde .uppercover .loginform .loginWrapper h1 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+.maininde .uppercover .loginform .loginWrapper p {
+  margin: 12px 0;
+}
+.maininde .uppercover .loginform .loginWrapper label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+.maininde .uppercover .loginform .loginWrapper input {
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+}
+.maininde .uppercover .loginform .loginWrapper .butSec {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  grid-column-gap: 10px;
+}
+.maininde .uppercover .loginform .loginWrapper button {
+  width: 120px;
+  text-align: center;
+  padding: 8px 5px;
+  margin-top: 10px;
+  background-color: var(--buttonColor1);
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.maininde .uppercover .loginform .loginWrapper .butSec p {
+  font-size: 13px;
+  cursor: pointer;
 }
 .maininde .uppercover .cov_img {
   width: 100%;
@@ -54,7 +101,7 @@
   object-fit: cover;
 }
 .maininde .uppercover .cov_text h1 {
-  font-size: 56px;
+  font-size: 60px;
   color: var(--mainCovHeader);
   margin-bottom: 25px;
   line-height: 50px;
@@ -66,21 +113,42 @@
 }
 .maininde .uppercover .cov_text h1 span {
   font-size: 32px;
-  color: black;
+  color: #fff;
   line-height: 30px;
   font-family: "Abhaya Libre", serif;
 }
 .maininde .uppercover .cov_text p {
-  font-size: 21px;
+  font-size: 28px;
   margin-bottom: 35px;
   text-align: left;
   font-weight: 600;
+  color: #fff;
   width: 70%;
   font-family: "Abhaya Libre", serif;
 }
 .maininde .uppercover .cov_text h2 {
-  font-family: "Great Vibes", cursive;
-  font-size: 28px;
+  font-family: "Abhaya Libre", serif;
+  color: #fff;
+  font-size: 33px;
+}
+.maininde .uppercover .cov_text .button {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  grid-gap: 15px;
+}
+.maininde .uppercover .cov_text .button .buttele {
+  padding: 8px;
+  background-color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.maininde .uppercover .cov_text .button .buttele i {
+  margin-right: 5px;
+  font-size: 20px;
 }
 .maininde .uppercover .cov_text button {
   padding: 12px;
@@ -396,7 +464,7 @@
 
 /*Counter*/
 .maininde .inde_counter {
-  padding: 30px 30px 0;
+  padding: 30px 30px;
 }
 .maininde .inde_counter h1 {
   font-size: 22px;
@@ -405,17 +473,16 @@
   text-align: center;
 }
 .maininde .inde_counter .main_inde_counter {
-  width: 1200px;
+  width: 1400px;
   margin: 0 auto;
 }
 .maininde .inde_counter .main_inde_counter .wr {
-  padding: 40px 0 35px;
   display: flex;
   justify-content: space-evenly;
 }
 .maininde .inde_counter .main_inde_counter .counter_colu {
   flex: 0.33;
-  padding: 25px 0;
+  padding: 14px 0;
   margin-right: 28px;
   border: 1px solid #dddddd;
   border-radius: 10px;
@@ -434,7 +501,7 @@
   font-size: 16px;
 }
 .maininde .inde_counter .main_inde_counter .counter_colu img {
-  width: 100px;
+  width: 50px;
 }
 /*new box*/
 .maininde .inde_counter.new-box .main_inde_counter {
