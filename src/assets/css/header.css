@@ -1,7 +1,7 @@
 nav {
   position: sticky;
   width: 100%;
-  padding: 20px 100px;
+  padding: 10px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,13 +29,13 @@ nav .column .hlogo h1 span {
   color: #5e17eb;
 }
 nav .column .hlogo img {
-  width: 205px;
+  width: 180px;
 }
 nav .column:nth-child(2) {
   flex: 2;
 }
 nav .column:nth-child(2) .navigation ul {
-  width: 100%;
+  width: 80%;
   list-style: none;
   display: flex;
   justify-content: space-evenly;

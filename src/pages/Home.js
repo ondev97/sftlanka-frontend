@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { activeAccount } from "../actions";
 import { loadStDetails } from "../actions/stDetailsAction";
-import cov from "../img/cover.jpg";
+import cov from "../img/cover.png";
 import "../assets/css/home.css";
 import "../assets/css/mediaFiles/homemedia.css";
-import { Link } from "react-router-dom";
-import Axios from "axios";
 import imgSec1 from "../img/1.png";
 import imgSec2 from "../img/2.png";
 import imgSec3 from "../img/3.png";
 import imgSec4 from "../img/4.png";
-import first from "../img/ISLAND.png";
+import telegram from "../img/telegram.png";
+import phone from "../img/phone.png";
+import LoginForm from "../components/LoginForm";
+
 export default function Home() {
   const dispatch = useDispatch();
 
@@ -38,34 +39,16 @@ export default function Home() {
           <h2>ප්‍රදීප් S දිසානායක</h2>
           <div className="button">
             <div className="buttele">
-              <i className="fab fa-whatsapp"></i>
+              <img src={phone} alt="phone" />
               0712123456
             </div>
             <div className="buttele">
-              <i class="fab fa-telegram-plane"></i>
+              <img src={telegram} alt="telegram" />
               Telegram Channel
             </div>
           </div>
         </div>
-        <div className="loginform">
-          <div className="loginWrapper">
-            <h1>Student Login</h1>
-            <form>
-              <p>
-                <label>Username</label>
-                <input type="text" name="Username" />
-              </p>
-              <p>
-                <label>Password</label>
-                <input type="password" name="password" />
-              </p>
-              <div className="butSec">
-                <button>Login</button>
-                <p>Forget Password</p>
-              </div>
-            </form>
-          </div>
-        </div>
+        <LoginForm />
         <div className="cov_img">
           <img src={cov} alt="image" />
         </div>

@@ -15,7 +15,7 @@
 }
 .maininde .uppercover {
   position: relative;
-  min-height: calc(70vh - 93px);
+  min-height: calc(79vh - 93px);
   background-color: var(--background1);
   padding: 0;
   display: flex;
@@ -54,6 +54,7 @@
 }
 .maininde .uppercover .loginform .loginWrapper p {
   margin: 12px 0;
+  position: relative;
 }
 .maininde .uppercover .loginform .loginWrapper label {
   display: block;
@@ -65,6 +66,28 @@
   width: 100%;
   padding: 7px;
   border-radius: 3px;
+}
+.maininde .uppercover .loginform .loginWrapper p .tip {
+  font-size: 11px;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  padding: 5px 8px;
+  background-color: #fb01010d;
+  color: red;
+  border-radius: 2px;
+  z-index: 100;
+  transition: opacity 0.9s;
+  text-transform: capitalize;
+}
+.maininde .uppercover .loginform .loginWrapper p .hidetip {
+  opacity: 0;
+  user-select: none;
+}
+.maininde .uppercover .loginform .loginWrapper .comtip {
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: red;
 }
 .maininde .uppercover .loginform .loginWrapper .butSec {
   width: 100%;
@@ -101,24 +124,24 @@
   object-fit: cover;
 }
 .maininde .uppercover .cov_text h1 {
-  font-size: 60px;
+  font-size: 35px;
   color: var(--mainCovHeader);
   margin-bottom: 25px;
   line-height: 50px;
 }
 .maininde .uppercover .cov_text h1 span.blackhe {
   font-family: "Open Sans", sans-seri;
-  font-size: 56px;
-  color: #525252;
+  font-size: 35px;
+  color: #fff;
 }
 .maininde .uppercover .cov_text h1 span {
-  font-size: 32px;
+  font-size: 20px;
   color: #fff;
   line-height: 30px;
   font-family: "Abhaya Libre", serif;
 }
 .maininde .uppercover .cov_text p {
-  font-size: 28px;
+  font-size: 22px;
   margin-bottom: 35px;
   text-align: left;
   font-weight: 600;
@@ -129,10 +152,10 @@
 .maininde .uppercover .cov_text h2 {
   font-family: "Abhaya Libre", serif;
   color: #fff;
-  font-size: 33px;
+  font-size: 22px;
 }
 .maininde .uppercover .cov_text .button {
-  margin-top: 15px;
+  margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -141,14 +164,18 @@
   grid-gap: 15px;
 }
 .maininde .uppercover .cov_text .button .buttele {
-  padding: 8px;
+  padding: 8px 15px;
   background-color: #fff;
   font-size: 16px;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.maininde .uppercover .cov_text .button .buttele i {
-  margin-right: 5px;
-  font-size: 20px;
+.maininde .uppercover .cov_text .button .buttele img {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
 }
 .maininde .uppercover .cov_text button {
   padding: 12px;
@@ -464,7 +491,7 @@
 
 /*Counter*/
 .maininde .inde_counter {
-  padding: 30px 30px;
+  padding: 20px 30px;
 }
 .maininde .inde_counter h1 {
   font-size: 22px;
@@ -473,7 +500,7 @@
   text-align: center;
 }
 .maininde .inde_counter .main_inde_counter {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 .maininde .inde_counter .main_inde_counter .wr {
@@ -481,7 +508,7 @@
   justify-content: space-evenly;
 }
 .maininde .inde_counter .main_inde_counter .counter_colu {
-  flex: 0.33;
+  flex: 0.25;
   padding: 14px 0;
   margin-right: 28px;
   border: 1px solid #dddddd;
@@ -498,10 +525,10 @@
 }
 .maininde .inde_counter .main_inde_counter .counter_colu h2 {
   margin-top: 15px;
-  font-size: 16px;
+  font-size: 12px;
 }
 .maininde .inde_counter .main_inde_counter .counter_colu img {
-  width: 50px;
+  width: 160px;
 }
 /*new box*/
 .maininde .inde_counter.new-box .main_inde_counter {
