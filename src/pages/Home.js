@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { activeAccount } from "../actions";
 import { loadStDetails } from "../actions/stDetailsAction";
 import cov from "../img/cover.png";
@@ -15,6 +15,7 @@ import LoginForm from "../components/LoginForm";
 
 export default function Home() {
   const dispatch = useDispatch();
+  const accountDetails = useSelector((state) => state.accountDetails);
 
   useEffect(() => {
     dispatch(activeAccount());
@@ -48,7 +49,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <LoginForm />
+        {!accountDetails.key ? <LoginForm /> : ""}
         <div className="cov_img">
           <img src={cov} alt="image" />
         </div>
