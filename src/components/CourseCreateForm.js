@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import Axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Cropper } from "react-cropper";
+import { useParams } from "react-router-dom";
 
 export default function CourseCreateForm({
   handelSubmit,
@@ -17,17 +19,27 @@ export default function CourseCreateForm({
   courseErrors,
   hide,
   progress,
+  usDetails,
 }) {
-  const [freeac, setfreeac] = useState(false);
-
-  const activefree = (e) => {
-    if (e.target.checked) {
-      setfreeac(true);
-    } else {
-      setfreeac(false);
+  const { id } = useParams();
+  const [subjectType, setsubjectType] = useState({});
+  useEffect(() => {
+    if (usDetails.key) {
+      Axios.get(
+        `${process.env.REACT_APP_LMS_MAIN_URL}/course-api/subject/${id}/`,
+        {
+          headers: { Authorization: "Token " + usDetails.key },
+        }
+      )
+        .then((res) => {
+          setsubjectType({ subjectType: res.data.subject_type });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-  };
-
+  }, [usDetails]);
+  console.log(subjectType);
   return (
     <form onSubmit={handelSubmit}>
       <p>
@@ -47,23 +59,7 @@ export default function CourseCreateForm({
           </span>
         )}
       </p>
-      <div className="costtype">
-        <label htmlFor="">
-          Course Payment Type <span>(Click Here And Switch)</span>
-        </label>
-        <label className="toggle" htmlFor="myToggle">
-          <input
-            type="checkbox"
-            className="toggleinput"
-            id="myToggle"
-            onClick={activefree}
-          />
-          <div className="fill">
-            <p>{freeac ? "Paid" : "Free"}</p>
-          </div>
-        </label>
-      </div>
-      {freeac ? (
+      {subjectType.subjectType !== "free" ? (
         <p>
           <label htmlFor="cp">Course Price</label>
           <span className="on_row">

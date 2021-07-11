@@ -144,9 +144,10 @@ export default function UpdateSujectForm({
             <option value="" disabled>
               Select Class Type
             </option>
-            <option value="a/l">A/L</option>
-            <option value="o/l">O/L</option>
-            <option value="other">Other</option>
+            <option value="revision">Revision</option>
+            <option value="theory">Theory</option>
+            <option value="Past Revision">Past Revision</option>
+            <option value="paper">Paper</option>
           </select>
           {formErrors.class_type && (
             <span className={`tip ${hide.class_type ? "hidetip" : ""}`}>
@@ -166,9 +167,7 @@ export default function UpdateSujectForm({
             <option value="" disabled>
               Select Subject Type
             </option>
-            <option value="revision">Revision</option>
-            <option value="theory">Theory</option>
-            <option value="group">Group</option>
+            <option value="paid">Paid</option>
             <option value="free">Free</option>
           </select>
           {formErrors.subject_type && (

@@ -8,15 +8,8 @@ import ThreeStepSection from "../components/ThreeStepSection";
 import CropImages from "../utils/hooks/CropImages";
 
 export default function CreateCourse() {
-  const [
-    image,
-    getCropData,
-    setCropper,
-    onChange,
-    cropData,
-    err,
-    file,
-  ] = CropImages(); //custom h
+  const [image, getCropData, setCropper, onChange, cropData, err, file] =
+    CropImages(); //custom h
   const [showCropper, setshowCropper] = useState(false);
 
   const [courseValue, setcourseValue] = useState({
@@ -167,6 +160,7 @@ export default function CreateCourse() {
           courseErrors={courseErrors}
           hide={hide}
           progress={progress}
+          usDetails={usDetails}
         />
       </div>
     </div>

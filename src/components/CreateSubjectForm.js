@@ -137,11 +137,10 @@ export default function CreateSubjectForm({
             <option value="" disabled>
               Select Class Type
             </option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-            <option value="2025">2025</option>
+            <option value="revision">Revision</option>
+            <option value="theory">Theory</option>
+            <option value="Past Revision">Past Revision</option>
+            <option value="paper">Paper</option>
           </select>
           {formErrors.class_type && (
             <span className={`tip ${hide.class_type ? "hidetip" : ""}`}>
@@ -161,10 +160,7 @@ export default function CreateSubjectForm({
             <option value="" disabled>
               Select Subject Type
             </option>
-            <option value="revision">Revision</option>
-            <option value="theory">Theory</option>
-            <option value="Past Revision">Past Revision</option>
-            <option value="paper">Paper</option>
+            <option value="paid">Paid</option>
             <option value="free">Free</option>
           </select>
           {formErrors.subject_type && (
