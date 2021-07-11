@@ -6,6 +6,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import ProfileLoader from "../../components/ProfileLoader";
 import Empty from "../../components/Empty";
 import FreeMySubjectsCard from "../../components/Free/FreeMySubjectCard";
+import { useHistory } from "react-router-dom";
 
 export default function FreeStudentMainDashboard() {
   const [subDetails, setsubDetails] = useState([]);
@@ -13,6 +14,7 @@ export default function FreeStudentMainDashboard() {
   const [nextPage, setnextPage] = useState(null);
   const [search, setsearch] = useState("");
   const [page, setpage] = useState(1);
+  let history = useHistory();
 
   const debounce = useDebounce(); //custom hook
   const url = `${process.env.REACT_APP_LMS_MAIN_URL}/course-api/freesubjects`;
@@ -46,6 +48,10 @@ export default function FreeStudentMainDashboard() {
     }
   }
 
+  const back = () => {
+    history.push("/");
+  };
+
   const handelSearchSubject = (e) => {
     const search = e.target.value;
     setpage(1);
@@ -55,8 +61,13 @@ export default function FreeStudentMainDashboard() {
   return (
     <>
       <div className="all_st_subs free_st_sub">
+        <div className="cr_models">
+          <button onClick={back}>
+            <i className="fas fa-chevron-circle-left"></i>Back to My Subjects
+          </button>
+        </div>
         <div className="pagetop">
-          <h1>My Subjects</h1>
+          <h1>Free Classes</h1>
         </div>
         {subDetails.length !== 0 ? (
           <div className="">

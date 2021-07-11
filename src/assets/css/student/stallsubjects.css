@@ -310,3 +310,28 @@
   padding: 10px 20px 50px 20px;
   width: 100%;
 }
+
+.free_st_sub .cr_models {
+  width: 100%;
+}
+.free_st_sub .cr_models button {
+  width: 175px;
+  padding: 8px 5px;
+  border: 1px solid var(--buttonColor1);
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  outline: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.free_st_sub .cr_models button i {
+  margin-right: 8px;
+}
+.free_st_sub .cr_models button:hover {
+  background-color: var(--buttonColor1);
+  color: #fff;
+}
+.free_st_sub .cr_models button:hover i {
+  color: #fff;
+}

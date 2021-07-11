@@ -22,6 +22,19 @@ export default function Header({ acDetails }) {
     },
   };
 
+  const mainRoute = [
+    "/",
+    "/about",
+    "/contact",
+    "/allteachers",
+    "/allsubjects",
+    "/stlogin",
+    "/stsignup",
+    "/passwordreset",
+    "/guidelines",
+    "/features",
+  ];
+
   const hambutton = () => {
     setisham(!isham);
   };
@@ -91,72 +104,76 @@ export default function Header({ acDetails }) {
     }
   };
 
-  return (
-    <>
-      <nav>
-        <div className="column">
-          <div className="hlogo">
-            <Link to="/">
-              <img src={logo} alt="logo" />
-            </Link>
+  if (mainRoute.includes(pathname)) {
+    return (
+      <>
+        <nav>
+          <div className="column">
+            <div className="hlogo">
+              <Link to="/">
+                <img src={logo} alt="logo" />
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="column">
-          <div className="navigation">
-            <ul>
-              <li>
-                <Link to="/">HOME</Link>
-              </li>
-              {/* <li>
+          <div className="column">
+            <div className="navigation">
+              <ul>
+                <li>
+                  <Link to="/">HOME</Link>
+                </li>
+                {/* <li>
                 <Link to="/about">ABOUT US</Link>
               </li>
               <li>
                 <Link to="/contact">CONTACT US</Link>
               </li> */}
-              <li>
-                <Link to="#">STUDENT'S GUIDE</Link>
-              </li>
-              <li>
-                <Link to="#">EXAM RESULTS</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="column">{headerProPic()}</div>
-        <div className="ham">
-          <button className="hambeggermenu" onClick={hambutton}>
-            <i className="fas fa-bars"></i>
-          </button>
-        </div>
-      </nav>
-      <AnimatePresence exitBeforeEnter>
-        {isham ? (
-          <motion.div
-            className="hammenu"
-            variants={mobnavani}
-            animate="visible"
-            initial="hidden"
-            exit="hidden"
-          >
-            <div className="menham">
-              <ul>
-                <Link to="/">
-                  <li>HOME</li>
-                </Link>
-                <Link to="#">
-                  <li>STUDENT'S GUIDE</li>
-                </Link>
-                <Link to="#">
-                  <li>EXAM RESULTS</li>
-                </Link>
+                <li>
+                  <Link to="#">STUDENT'S GUIDE</Link>
+                </li>
+                <li>
+                  <Link to="#">EXAM RESULTS</Link>
+                </li>
               </ul>
-              <div className="butham">{headerProPic()}</div>
             </div>
-          </motion.div>
-        ) : (
-          ""
-        )}
-      </AnimatePresence>
-    </>
-  );
+          </div>
+          <div className="column">{headerProPic()}</div>
+          <div className="ham">
+            <button className="hambeggermenu" onClick={hambutton}>
+              <i className="fas fa-bars"></i>
+            </button>
+          </div>
+        </nav>
+        <AnimatePresence exitBeforeEnter>
+          {isham ? (
+            <motion.div
+              className="hammenu"
+              variants={mobnavani}
+              animate="visible"
+              initial="hidden"
+              exit="hidden"
+            >
+              <div className="menham">
+                <ul>
+                  <Link to="/">
+                    <li>HOME</li>
+                  </Link>
+                  <Link to="#">
+                    <li>STUDENT'S GUIDE</li>
+                  </Link>
+                  <Link to="#">
+                    <li>EXAM RESULTS</li>
+                  </Link>
+                </ul>
+                <div className="butham">{headerProPic()}</div>
+              </div>
+            </motion.div>
+          ) : (
+            ""
+          )}
+        </AnimatePresence>
+      </>
+    );
+  } else {
+    return "";
+  }
 }
