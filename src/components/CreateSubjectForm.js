@@ -165,6 +165,7 @@ export default function CreateSubjectForm({
             <option value="theory">Theory</option>
             <option value="Past Revision">Past Revision</option>
             <option value="paper">Paper</option>
+            <option value="free">Free</option>
           </select>
           {formErrors.subject_type && (
             <span className={`tip ${hide.subject_type ? "hidetip" : ""}`}>

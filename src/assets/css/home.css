@@ -516,6 +516,10 @@
   text-align: center;
   background-color: #fbfbfb;
 }
+.maininde .inde_counter .main_inde_counter .counter_colu a {
+  text-decoration: none;
+  color: #000;
+}
 .maininde .inde_counter .main_inde_counter .counter_colu h3 {
   font-size: 36px;
   color: #808080;

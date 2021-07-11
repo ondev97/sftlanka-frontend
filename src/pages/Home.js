@@ -12,6 +12,7 @@ import imgSec4 from "../img/4.png";
 import telegram from "../img/telegram.png";
 import phone from "../img/phone.png";
 import LoginForm from "../components/LoginForm";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -58,16 +59,20 @@ export default function Home() {
         <div className="main_inde_counter">
           <div className="wr">
             <div className="counter_colu">
-              <div className="img_sec">
-                <img src={imgSec1} />
-              </div>
-              <h2>UPCOMING CLASS : 2021.07.05 | 04 PM</h2>
+              <Link to="/freeclasses">
+                <div className="img_sec">
+                  <img src={imgSec1} />
+                </div>
+                <h2>UPCOMING CLASS : 2021.07.05 | 04 PM</h2>
+              </Link>
             </div>
             <div className="counter_colu">
-              <div className="img_sec">
-                <img src={imgSec2} />
-              </div>
-              <h2>UPCOMING CLASS : 2021.07.05 | 04 PM</h2>
+              <Link to="/freeclasses">
+                <div className="img_sec">
+                  <img src={imgSec2} />
+                </div>
+                <h2>UPCOMING CLASS : 2021.07.05 | 04 PM</h2>
+              </Link>
             </div>
             <div className="counter_colu">
               <div className="img_sec">

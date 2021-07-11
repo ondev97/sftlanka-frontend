@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export default function MySubjectsCard({
+export default function FreeMySubjectsCard({
   id,
   subject_name,
   subject_cover,
@@ -14,7 +14,7 @@ export default function MySubjectsCard({
 }) {
   return (
     <div className="al_sub_card">
-      <Link to={`/studentdashboard/mycoursesforsubject/${id}`}>
+      <Link to={`/freesubcources/${id}`}>
         <div className="sub_card_row">
           <div className="image_sub">
             <LazyLoadImage effect="blur" src={`${subject_cover}`} alt="" />

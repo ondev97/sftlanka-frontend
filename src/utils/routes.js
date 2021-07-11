@@ -9,6 +9,9 @@ import PasswordReset from "../pages/PasswordReset";
 import Features from "../pages/Features";
 import Guidelines from "../pages/Guidelines";
 import NotFound from "../pages/NotFound";
+import FreeStudentMainDashboard from "../pages/Free/FreeStudentMainDashboard";
+import FreeStSubCourses from "../pages/Free/FreeStSubCourses";
+import FreeStmodules from "../pages/Free/FreeStmodules";
 
 export default [
   {
@@ -58,6 +61,18 @@ export default [
   {
     path: "/passwordreset",
     components: () => <PasswordReset />,
+  },
+  {
+    path: "/freeclasses",
+    components: () => <FreeStudentMainDashboard />,
+  },
+  {
+    path: "/freesubcources/:id",
+    components: () => <FreeStSubCourses />,
+  },
+  {
+    path: "/freemodule/:id",
+    components: () => <FreeStmodules />,
   },
   {
     components: () => <NotFound />,

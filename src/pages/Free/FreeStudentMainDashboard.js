@@ -1,24 +1,21 @@
 import "../../assets/css/student/stallsubjects.css";
 import Axios from "axios";
-import { useSelector } from "react-redux";
 import useDebounce from "../../utils/hooks/useDebounce";
 import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import MySubjectsCard from "../../components/student/MySubjectCard";
 import ProfileLoader from "../../components/ProfileLoader";
 import Empty from "../../components/Empty";
+import FreeMySubjectsCard from "../../components/Free/FreeMySubjectCard";
 
-export default function StudentMainDashboard() {
+export default function FreeStudentMainDashboard() {
   const [subDetails, setsubDetails] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [nextPage, setnextPage] = useState(null);
   const [search, setsearch] = useState("");
   const [page, setpage] = useState(1);
-  //get acDetails from Redux Store
-  const usDetails = useSelector((state) => state.accountDetails);
 
   const debounce = useDebounce(); //custom hook
-  const url = `${process.env.REACT_APP_LMS_MAIN_URL}/course-api/mysubjects_stu`;
+  const url = `${process.env.REACT_APP_LMS_MAIN_URL}/course-api/freesubjects`;
 
   useEffect(() => {
     if (search === "") {
@@ -28,23 +25,19 @@ export default function StudentMainDashboard() {
       const fetchurl = `${url}/`;
       getSubjectDetails(fetchurl);
     }
-  }, [usDetails, page, search]);
+  }, [page, search]);
 
   const getSubjectDetails = async (fetchurl) => {
     setisLoading(true);
-    if (usDetails.key) {
-      await Axios.get(fetchurl, {
-        headers: { Authorization: "Token " + usDetails.key },
+    await Axios.get(fetchurl, {})
+      .then((res) => {
+        console.log(res);
+        setisLoading(false);
+        setsubDetails([...res.data]);
       })
-        .then((res) => {
-          setisLoading(false);
-          setsubDetails([...res.data]);
-        })
-        .catch((err) => {
-          if (err.response.data) {
-          }
-        });
-    }
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   function next() {
@@ -61,20 +54,9 @@ export default function StudentMainDashboard() {
 
   return (
     <>
-      <div className="all_st_subs">
+      <div className="all_st_subs free_st_sub">
         <div className="pagetop">
           <h1>My Subjects</h1>
-          <div className="search_row">
-            <input
-              type="text"
-              name="search"
-              placeholder="Search Subject"
-              onChange={handelSearchSubject}
-            />
-            <button>
-              <i className="fas fa-search"></i>
-            </button>
-          </div>
         </div>
         {subDetails.length !== 0 ? (
           <div className="">
@@ -84,7 +66,7 @@ export default function StudentMainDashboard() {
               className="all_sub_body list_view_st"
             >
               {subDetails.map((det) => (
-                <MySubjectsCard
+                <FreeMySubjectsCard
                   key={det.id}
                   id={det.id}
                   subject_name={det.subject_name}

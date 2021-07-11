@@ -304,3 +304,9 @@
 .all_st_subs .pagetop .search_row.edited button i {
   color: #fff;
 }
+
+/*Free subjects*/
+.free_st_sub {
+  padding: 10px 20px 50px 20px;
+  width: 100%;
+}
