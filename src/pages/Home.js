@@ -61,7 +61,7 @@ export default function Home() {
             <div className="counter_colu">
               <Link to="/freeclasses">
                 <div className="img_sec">
-                  <img src={imgSec1} />
+                  <img src={imgSec4} />
                 </div>
                 <h2>UPCOMING CLASS : 2021.07.05 | 04 PM</h2>
               </Link>
@@ -82,7 +82,7 @@ export default function Home() {
             </div>
             <div className="counter_colu">
               <div className="img_sec">
-                <img src={imgSec4} />
+                <img src={imgSec1} />
               </div>
               <h2>UPCOMING CLASS : 2021.07.05 | 04 PM</h2>
             </div>
