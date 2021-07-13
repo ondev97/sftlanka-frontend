@@ -64,7 +64,7 @@ export default function CourseSect({
         <div className="options_manage">
           <ul>
             <li onClick={() => deleteCourse(courseid)}>Delete</li>
-            <Link to={`/teacherdashboard/updatecourse/${courseid}/`}>
+            <Link to={`/teacherdashboard/updatecourse/${courseid}/${id}`}>
               <li>Edit</li>
             </Link>
           </ul>

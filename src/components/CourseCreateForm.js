@@ -39,7 +39,6 @@ export default function CourseCreateForm({
         });
     }
   }, [usDetails]);
-  console.log(subjectType);
   return (
     <form onSubmit={handelSubmit}>
       <p>

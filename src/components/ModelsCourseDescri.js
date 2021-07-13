@@ -175,7 +175,7 @@ export default function ModelsCourseDescri({ id }) {
               height="100%"
             />
             <div className="cos_options">
-              <Link to={`/teacherdashboard/updatecourse/${id}/`}>
+              <Link to={`/teacherdashboard/updatecourse/${id}/${cid}`}>
                 <button title="Edit This Course">
                   <i className="fas fa-pencil-alt"></i>
                   <span>Edit Course</span>

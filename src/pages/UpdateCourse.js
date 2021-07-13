@@ -215,6 +215,7 @@ export default function UpdateCourse() {
           setfreeac={setfreeac}
           freeac={freeac}
           setcourseValue={setcourseValue}
+          usDetails={usDetails}
         />
       </div>
     </div>

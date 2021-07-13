@@ -1,7 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import Axios from "axios";
+import React, { useEffect, useRef, useState } from "react";
 import { Cropper } from "react-cropper";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { useParams } from "react-router-dom";
 
 export default function UpdateCourseForm({
   showCropper,
@@ -22,9 +24,30 @@ export default function UpdateCourseForm({
   setfreeac,
   freeac,
   setcourseValue,
+  usDetails,
 }) {
-  const intis = useRef();
   const isfreeze = useRef();
+  const [subjectType, setsubjectType] = useState({});
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (usDetails.key) {
+      Axios.get(
+        `${process.env.REACT_APP_LMS_MAIN_URL}/course-api/subject/${id}/`,
+        {
+          headers: { Authorization: "Token " + usDetails.key },
+        }
+      )
+        .then((res) => {
+          setsubjectType({ subjectType: res.data.subject_type });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, [usDetails]);
+
+  console.log(id);
 
   const activefree = (e) => {
     if (e.target.checked) {
@@ -36,21 +59,6 @@ export default function UpdateCourseForm({
       setfreeac(false);
     }
   };
-  useEffect(() => {
-    if (
-      courseValue.course_price === 0 ||
-      courseValue.course_price === null ||
-      courseValue.course_price === ""
-    ) {
-      setfreeac(false);
-    } else {
-      intis.current.checked = "unchecked";
-      setfreeac(true);
-    }
-    if (courseValue.is_freeze) {
-      isfreeze.current.checked = "true";
-    }
-  }, [courseValue]);
 
   //course freeze function
   const setFreezeCourse = (e) => {
@@ -78,22 +86,7 @@ export default function UpdateCourseForm({
           </span>
         )}
       </p>
-      <div className="costtype">
-        <label htmlFor="">Course Payment Type</label>
-        <label className="toggle" htmlFor="myToggle">
-          <input
-            type="checkbox"
-            ref={intis}
-            className="toggleinput"
-            id="myToggle"
-            onClick={activefree}
-          />
-          <div className="fill">
-            <p>{freeac ? "Paid" : "Free"}</p>
-          </div>
-        </label>
-      </div>
-      {freeac ? (
+      {subjectType.subjectType !== "free" ? (
         <p>
           <label htmlFor="cp">Course Price</label>
           <span className="on_row">
