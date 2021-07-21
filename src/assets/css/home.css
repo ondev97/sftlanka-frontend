@@ -172,6 +172,9 @@
   justify-content: center;
   align-items: center;
 }
+.maininde .uppercover .cov_text .button a {
+  text-decoration: none;
+}
 .maininde .uppercover .cov_text .button .buttele img {
   margin-right: 10px;
   width: 25px;

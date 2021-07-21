@@ -42,12 +42,14 @@ export default function Home() {
           <div className="button">
             <div className="buttele">
               <img src={phone} alt="phone" />
-              0712123456
+              0716588634
             </div>
-            <div className="buttele">
-              <img src={telegram} alt="telegram" />
-              Telegram Channel
-            </div>
+            <Link to="//t.me/joinchat/UUNOywKbLc5RWPrh" target="_blank">
+              <div className="buttele">
+                <img src={telegram} alt="telegram" />
+                Telegram Channel
+              </div>
+            </Link>
           </div>
         </div>
         {!accountDetails.key ? <LoginForm /> : ""}
