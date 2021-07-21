@@ -40,10 +40,15 @@ export default function Home() {
           </p>
           <h2>ප්‍රදීප් S දිසානායක</h2>
           <div className="button">
-            <div className="buttele">
-              <img src={phone} alt="phone" />
-              0716588634
-            </div>
+            <Link
+              to="//chat.whatsapp.com/G7RThgkNVOjHd7lBUH4ssw"
+              target="_blank"
+            >
+              <div className="buttele">
+                <img src={phone} alt="phone" />
+                0716588634
+              </div>
+            </Link>
             <Link to="//t.me/joinchat/UUNOywKbLc5RWPrh" target="_blank">
               <div className="buttele">
                 <img src={telegram} alt="telegram" />
