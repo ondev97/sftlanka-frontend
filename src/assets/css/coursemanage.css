@@ -273,6 +273,7 @@
 }
 .main_ar_course .course_body.list_view .course_card .cscard_head {
   position: initial;
+  height: initial;
 }
 .main_ar_course .course_body.list_view .course_card .cscard_head a {
   display: none;
